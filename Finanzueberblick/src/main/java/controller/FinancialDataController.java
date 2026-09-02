@@ -2,6 +2,7 @@ package controller;
 
 import Model.DTO.CategoryDTO;
 import Model.DTO.GoalDTO;
+import Repository.CategoryRepository;
 import Service.CategoryService;
 import Service.GoalService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,8 @@ public class FinancialDataController {
     GoalService goalService;
     @Autowired
     CategoryService categoryService;
+    @Autowired
+    private CategoryRepository categoryRepository;
     @PostMapping
     public List<GoalDTO> savingGoal(@RequestBody List<GoalDTO> goalDTOList)
     {
@@ -29,6 +32,14 @@ public class FinancialDataController {
     @PostMapping
     public List<CategoryDTO> savingCategorys(@RequestBody List<CategoryDTO> categoryDTOList){
         return categoryService.savingNewCategorys(categoryDTOList);
+    }
+    @DeleteMapping("/{id}")
+    public void deleteCategory(@PathVariable Long id){
+        categoryRepository.deleteById(id);
+    }
+    @GetMapping("getCategorys")
+    public List<CategoryDTO> getAllCategorys(){
+        return categoryService.getAll();
     }
 }
 

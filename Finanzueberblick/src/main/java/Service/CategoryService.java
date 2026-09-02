@@ -14,6 +14,7 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepo;
     private List<CategoryEntity> categoryEntities;
+    private List<CategoryDTO> categoryDTOS;
     @Autowired
     private CategoryMap categoryMap;
 
@@ -25,6 +26,11 @@ public class CategoryService {
             }
         }
         return categoryMap.toDTOList(categoryEntities);
+    }
+    public List<CategoryDTO> getAll(){
+      categoryEntities =  categoryRepo.findAll();
+        return categoryDTOS  = categoryMap.toDTOList(categoryEntities);
+
     }
 
     }
