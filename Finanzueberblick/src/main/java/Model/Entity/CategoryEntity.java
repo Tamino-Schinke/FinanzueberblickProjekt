@@ -20,14 +20,12 @@ public class CategoryEntity {
     @NotNull
     private double priceLimit;
     private double spentSoFar;
-    public CategoryEntity(Long id, String category)
+    public CategoryEntity( String category)
     {
-        this.id = id;
         this.category = category;
     }
-    public CategoryEntity(Long id, String category, double priceLimit, double spentSoFar)
+    public CategoryEntity( String category, double priceLimit, double spentSoFar)
     {
-        this.id = id;
         this.category = category;
         this.priceLimit = priceLimit;
         this.spentSoFar = spentSoFar;

@@ -1,6 +1,8 @@
 package controller;
 
+import Model.DTO.CategoryDTO;
 import Model.DTO.GoalDTO;
+import Service.CategoryService;
 import Service.GoalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +14,8 @@ import java.util.List;
 public class FinancialDataController {
     @Autowired
     GoalService goalService;
+    @Autowired
+    CategoryService categoryService;
     @PostMapping
     public List<GoalDTO> savingGoal(@RequestBody List<GoalDTO> goalDTOList)
     {
@@ -21,6 +25,10 @@ public class FinancialDataController {
     public GoalDTO getSavingGoalById(@PathVariable Long id)
     {
     return goalService.getGoalById(id);
+    }
+    @PostMapping
+    public List<CategoryDTO> savingCategorys(@RequestBody List<CategoryDTO> categoryDTOList){
+        return categoryService.savingNewCategorys(categoryDTOList);
     }
 }
 
