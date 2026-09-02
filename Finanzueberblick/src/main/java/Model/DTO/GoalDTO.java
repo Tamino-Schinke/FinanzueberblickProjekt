@@ -8,14 +8,14 @@ import java.time.LocalDateTime;
 @Builder
 @Getter
 @Setter
-public class DebitDTO {
+public class GoalDTO {
     private Long id;
     private boolean alreadyPaid;
     private String category;
     private LocalDateTime dateOfRegestration;
     private String intendedUse;
 
-    public  DebitDTO(Long id, boolean alreadyPaid, String category, LocalDateTime dateOfRegestration)
+    public GoalDTO(Long id, boolean alreadyPaid, String category, LocalDateTime dateOfRegestration)
     {
         this.id = id;
         this.alreadyPaid = alreadyPaid;
@@ -23,7 +23,7 @@ public class DebitDTO {
         this.dateOfRegestration=dateOfRegestration;
     }
 
-    public  DebitDTO(Long id, boolean alreadyPaid, String category, LocalDateTime dateOfRegestration, String intendedUse)
+    public GoalDTO(Long id, boolean alreadyPaid, String category, LocalDateTime dateOfRegestration, String intendedUse)
     {
         this.id = id;
         this.alreadyPaid = alreadyPaid;

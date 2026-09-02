@@ -1,25 +1,26 @@
 package controller;
 
-import Model.DTO.DebitDTO;
-import Service.DebitService;
+import Model.DTO.GoalDTO;
+import Service.GoalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/userInput")
+@RequestMapping("/api/user")
 public class FinancialDataController {
     @Autowired
-    DebitService debitService;
-@PostMapping
-    public List<DebitDTO> savingDebits(List<DebitDTO> debitDTOList)
+    GoalService goalService;
+    @PostMapping
+    public List<GoalDTO> savingGoal(@RequestBody List<GoalDTO> goalDTOList)
     {
-   return debitService.saveNewDebits(debitDTOList);
+   return goalService.savingNewGoals(goalDTOList);
     }
-    @GetMapping("/api/getDebit/{id}")
-    public DebitDTO getDebit(@PathVariable Long id)
+    @GetMapping("getGoal/{id}")
+    public GoalDTO getSavingGoalById(@PathVariable Long id)
     {
-    return debitService.getDebitById(id);
+    return goalService.getGoalById(id);
     }
 }
+
