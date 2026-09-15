@@ -4,6 +4,7 @@ import Mapper.CategoryMap;
 import Model.DTO.CategoryDTO;
 import Model.Entity.CategoryEntity;
 import Repository.CategoryRepository;
+import org.mapstruct.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,18 +19,20 @@ public class CategoryService {
     @Autowired
     private CategoryMap categoryMap;
 
+
     public List<CategoryDTO> savingNewCategorys(List<CategoryDTO> categorys) {
-        categoryEntities = categoryMap.toEntityList(categorys);
+        categoryEntities = categoryMap.toEntities(categorys);
         for (CategoryEntity category : categoryEntities) {
             if (categoryRepo.findByCategory(category.getCategory()).isEmpty()) {
                 categoryRepo.save(category);
             }
         }
-        return categoryMap.toDTOList(categoryEntities);
+        return categoryMap.toDTOs(categoryEntities);
     }
     public List<CategoryDTO> getAll(){
       categoryEntities =  categoryRepo.findAll();
-        return categoryDTOS  = categoryMap.toDTOList(categoryEntities);
+      categoryDTOS  = categoryMap.toDTOs(categoryEntities);
+      return categoryDTOS;
 
     }
 

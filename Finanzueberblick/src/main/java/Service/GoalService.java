@@ -40,7 +40,7 @@ public List<GoalDTO> savingNewGoals(List<GoalDTO> allInputGoals)
 public GoalDTO getGoalById(Long id)
 {
    goalEntity = goalRepo.findById(id).orElseThrow(RuntimeException::new);
-   return GoalMap.toDTO(goalEntity);
+   return goalMap.toDTO(goalEntity);
 }
 
 }
