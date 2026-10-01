@@ -4,7 +4,6 @@ import Mapper.CategoryMap;
 import Model.DTO.CategoryDTO;
 import Model.Entity.CategoryEntity;
 import Repository.CategoryRepository;
-import org.mapstruct.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +32,5 @@ public class CategoryService {
       categoryEntities =  categoryRepo.findAll();
       categoryDTOS  = categoryMap.toDTOs(categoryEntities);
       return categoryDTOS;
-
     }
-
     }

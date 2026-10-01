@@ -41,5 +41,6 @@ public class FinancialDataController {
     public List<CategoryDTO> getAllCategorys(){
         return categoryService.getAll();
     }
+
 }
 

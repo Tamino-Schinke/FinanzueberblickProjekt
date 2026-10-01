@@ -30,4 +30,11 @@ public class CategoryEntity {
         this.priceLimit = priceLimit;
         this.spentSoFar = spentSoFar;
     }
+    public CategoryEntity(Long id, String category, double priceLimit, double spentSoFar)
+    {
+        this.id = id;
+        this.category = category;
+        this.priceLimit = priceLimit;
+        this.spentSoFar = spentSoFar;
+    }
 }

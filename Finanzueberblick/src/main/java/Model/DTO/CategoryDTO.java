@@ -11,10 +11,15 @@ public class CategoryDTO {
     private String category;
     private double priceLimit;
     private double spentSoFar;
-    public CategoryDTO(Long id, String category)
+   public CategoryDTO(String category)
     {
-        this.id = id;
         this.category = category;
+    }
+    public CategoryDTO(String category,double priceLimit, double spentSoFar)
+    {
+        this.category = category;
+        this.priceLimit = priceLimit;
+        this.spentSoFar = spentSoFar;
     }
     public CategoryDTO(Long id, String category,double priceLimit, double spentSoFar)
     {
