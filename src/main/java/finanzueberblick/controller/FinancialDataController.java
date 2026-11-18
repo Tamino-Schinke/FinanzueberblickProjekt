@@ -1,10 +1,10 @@
 package finanzueberblick.controller;
 
-import finanzueberblick.Model.DTO.CategoryDTO;
-import finanzueberblick.Model.DTO.GoalDTO;
-import finanzueberblick.Repository.CategoryRepository;
-import finanzueberblick.Service.CategoryService;
-import finanzueberblick.Service.GoalService;
+import finanzueberblick.model.dto.CategoryDTO;
+import finanzueberblick.model.dto.GoalDTO;
+import finanzueberblick.repository.CategoryRepository;
+import finanzueberblick.service.CategoryService;
+import finanzueberblick.service.GoalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

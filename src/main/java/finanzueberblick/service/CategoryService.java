@@ -1,9 +1,9 @@
-package finanzueberblick.Service;
+package finanzueberblick.service;
 
-import finanzueberblick.Mapper.CategoryMap;
-import finanzueberblick.Model.DTO.CategoryDTO;
-import finanzueberblick.Model.Entity.CategoryEntity;
-import finanzueberblick.Repository.CategoryRepository;
+import finanzueberblick.mapper.CategoryMap;
+import finanzueberblick.model.dto.CategoryDTO;
+import finanzueberblick.model.entity.CategoryEntity;
+import finanzueberblick.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

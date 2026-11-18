@@ -1,7 +1,7 @@
-package finanzueberblick.Mapper;
+package finanzueberblick.mapper;
 
-import finanzueberblick.Model.DTO.CategoryDTO;
-import finanzueberblick.Model.Entity.CategoryEntity;
+import finanzueberblick.model.dto.CategoryDTO;
+import finanzueberblick.model.entity.CategoryEntity;
 import org.mapstruct.Mapper;
 
 import java.util.List;

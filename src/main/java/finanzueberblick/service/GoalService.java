@@ -1,11 +1,11 @@
-package finanzueberblick.Service;
+package finanzueberblick.service;
 
-import finanzueberblick.Mapper.GoalMap;
-import finanzueberblick.Model.DTO.GoalDTO;
-import finanzueberblick.Model.Entity.CategoryEntity;
-import finanzueberblick.Model.Entity.GoalEntity;
-import finanzueberblick.Repository.CategoryRepository;
-import finanzueberblick.Repository.GoalRepository;
+import finanzueberblick.mapper.GoalMap;
+import finanzueberblick.model.dto.GoalDTO;
+import finanzueberblick.model.entity.CategoryEntity;
+import finanzueberblick.model.entity.GoalEntity;
+import finanzueberblick.repository.CategoryRepository;
+import finanzueberblick.repository.GoalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package finanzueberblick.Repository;
+package finanzueberblick.repository;
 
-import finanzueberblick.Model.Entity.CategoryEntity;
+import finanzueberblick.model.entity.CategoryEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

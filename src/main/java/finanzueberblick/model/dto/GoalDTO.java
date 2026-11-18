@@ -1,4 +1,4 @@
-package finanzueberblick.Model.DTO;
+package finanzueberblick.model.dto;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

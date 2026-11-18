@@ -1,7 +1,7 @@
-package finanzueberblick.Repository;
+package finanzueberblick.repository;
 
 
-import finanzueberblick.Model.Entity.GoalEntity;
+import finanzueberblick.model.entity.GoalEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

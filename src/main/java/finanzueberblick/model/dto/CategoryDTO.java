@@ -1,4 +1,4 @@
-package finanzueberblick.Model.DTO;
+package finanzueberblick.model.dto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
