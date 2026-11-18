@@ -1,6 +1,6 @@
 package finanzueberblick.service;
 
-import finanzueberblick.mapper.GoalMap;
+import finanzueberblick.mapper.IGoalMap;
 import finanzueberblick.model.dto.GoalDTO;
 import finanzueberblick.model.entity.CategoryEntity;
 import finanzueberblick.model.entity.GoalEntity;
@@ -16,7 +16,7 @@ import java.util.Optional;
 public class GoalService {
     GoalEntity goalEntity;
     @Autowired
-    private GoalMap goalMap;
+    private IGoalMap goalMap;
     @Autowired
     private GoalRepository goalRepo;
     @Autowired

@@ -1,6 +1,6 @@
 package finanzueberblick.service;
 
-import finanzueberblick.mapper.CategoryMap;
+import finanzueberblick.mapper.ICategoryMap;
 import finanzueberblick.model.dto.CategoryDTO;
 import finanzueberblick.model.entity.CategoryEntity;
 import finanzueberblick.repository.CategoryRepository;
@@ -16,7 +16,7 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepo;
     @Autowired
-    private CategoryMap categoryMap;
+    private ICategoryMap categoryMap;
 
 
     public List<CategoryDTO> savingNewCategorys(List<CategoryDTO> categorys) {

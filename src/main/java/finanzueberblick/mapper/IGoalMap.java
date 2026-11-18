@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 import java.util.List;
 
 @Mapper(componentModel = "spring")
-public interface GoalMap {
+public interface IGoalMap {
     GoalEntity toEntity (GoalDTO goalDTO);
     List<GoalEntity> toEntityList(List<GoalDTO> goalDTOList);
     GoalDTO toDTO (GoalEntity goalEntity);
